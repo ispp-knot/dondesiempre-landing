@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalia — Moda Local, Cerca de Ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       NAVEGACIÓN
+  ======================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <!-- Logo SVG inline basado en el logo subido -->
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 60 75" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 4 C24 4 18 8 18 14 L18 18 L10 18 C6 18 2 22 2 26 L2 62 C2 66 6 70 10 70 L50 70 C54 70 58 66 58 62 L58 26 C58 22 54 18 50 18 L42 18 L42 14 C42 8 36 4 30 4 Z" fill="#3dbdad"/>
+          <path d="M2 45 L58 45 L58 62 C58 66 54 70 50 70 L10 70 C6 70 2 66 2 62 Z" fill="#e8613a"/>
+          <circle cx="30" cy="14" r="5" fill="none" stroke="#c8960c" stroke-width="3"/>
+          <path d="M18 14 Q18 10 22 8 Q26 6 30 6 Q34 6 38 8 Q42 10 42 14" fill="none" stroke="#c8960c" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 42 C20 35 24 30 30 30 C36 30 40 35 40 42 C40 49 36 54 30 54 C24 54 20 49 20 42 Z" fill="white" opacity="0.9"/>
+        </svg>
+        <span class="logo-text">modalia</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#tiendas">Tiendas</a></li>
+        <li><a href="#testimonios">Opiniones</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="btn-ghost">Iniciar sesión</a>
+        <a href="#" class="btn-primary">Registrar tienda</a>
+      </div>
+
+      <!-- Hamburger para mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#como-funciona" onclick="closeMobile()">Cómo funciona</a></li>
+        <li><a href="#beneficios" onclick="closeMobile()">Beneficios</a></li>
+        <li><a href="#tiendas" onclick="closeMobile()">Tiendas</a></li>
+        <li><a href="#testimonios" onclick="closeMobile()">Opiniones</a></li>
+        <li><a href="#" class="btn-primary-full">Registrar tienda</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ========================================
+       HERO SECTION
+  ======================================== -->
+  <section class="hero" id="inicio">
+    <!-- Formas decorativas de fondo -->
+    <div class="hero-blob hero-blob--1"></div>
+    <div class="hero-blob hero-blob--2"></div>
+    <div class="hero-blob hero-blob--3"></div>
+
+    <div class="container hero-grid">
+
+      <!-- Columna de texto -->
+      <div class="hero-content fade-in">
+        <span class="hero-badge">🇪🇸 El marketplace de moda más local de España</span>
+        <h1 class="hero-title">
+          La moda de tu ciudad,<br />
+          <span class="highlight">a un paso de ti</span>
+        </h1>
+        <p class="hero-subtitle">
+          Descubre boutiques, tiendas vintage y diseñadores locales en tu barrio.
+          Compra con alma, apoya lo tuyo.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#" class="btn-hero-primary">
+            Descubre tiendas cerca de ti
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#como-funciona" class="btn-hero-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".2"/><path d="M10 8l6 4-6 4V8z"/></svg>
+            Ver cómo funciona
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">+2.400</span>
+            <span class="stat-label">Tiendas activas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">18</span>
+            <span class="stat-label">Ciudades</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">4.9 ★</span>
+            <span class="stat-label">Valoración media</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna visual / mockup -->
+      <div class="hero-visual fade-in fade-in--delay">
+        <div class="mockup-card mockup-card--back"></div>
+        <div class="mockup-card mockup-card--mid"></div>
+        <div class="mockup-card mockup-card--front">
+          <!-- Tarjeta producto simulada -->
+          <div class="mockup-img">
+            <div class="mockup-img-placeholder">
+              <!-- Silueta de prenda -->
+              <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 20 L20 50 L35 55 L35 140 L85 140 L85 55 L100 50 L80 20 C75 25 65 30 60 30 C55 30 45 25 40 20Z" fill="#3dbdad" opacity="0.25"/>
+                <path d="M40 20 L20 50 L35 55 L35 140 L85 140 L85 55 L100 50 L80 20 C75 25 65 30 60 30 C55 30 45 25 40 20Z" fill="none" stroke="#3dbdad" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="mockup-info">
+            <span class="mockup-store">Boutique Alma · Sevilla</span>
+            <span class="mockup-name">Vestido lino verano</span>
+            <span class="mockup-price">49,90 €</span>
+          </div>
+          <div class="mockup-tag">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5a.5.5 0 0 1 .5-.5z"/></svg>
+            Nuevo
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge float-badge--1">
+          <span>📍</span> Entrega local
+        </div>
+        <div class="float-badge float-badge--2">
+          <span>♻️</span> Moda sostenible
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave separador -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       CÓMO FUNCIONA
+  ======================================== -->
+  <section class="steps" id="como-funciona">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple y rápido</span>
+        <h2 class="section-title">¿Cómo funciona Modalia?</h2>
+        <p class="section-desc">En menos de 2 minutos puedes estar comprando en tiendas de tu ciudad</p>
+      </div>
+
+      <div class="steps-grid">
+
+        <div class="step-card reveal">
+          <div class="step-icon step-icon--teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <div class="step-number">01</div>
+          <h3>Explora cerca de ti</h3>
+          <p>Introduce tu ciudad o activa la geolocalización. Verás al instante todas las tiendas disponibles en tu zona.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-icon step-icon--orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="step-number">02</div>
+          <h3>Elige lo que te gusta</h3>
+          <p>Filtra por estilo, talla, precio o tipo de tienda. Guarda tus favoritos y sigue a tus boutiques preferidas.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-icon step-icon--gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1"/><circle cx="6" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          </div>
+          <div class="step-number">03</div>
+          <h3>Recibe o recoge</h3>
+          <p>Elige entre envío a domicilio o recogida en tienda. Apoya el comercio local con cada compra.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-icon step-icon--teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="step-number">04</div>
+          <h3>Compra con confianza</h3>
+          <p>Pago seguro, devoluciones garantizadas y soporte en español. Tu satisfacción es nuestra prioridad.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       BENEFICIOS
+  ======================================== -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Para todos</span>
+        <h2 class="section-title">Beneficios que marcan la diferencia</h2>
+      </div>
+
+      <div class="benefits-grid">
+
+        <!-- Para compradores -->
+        <div class="benefits-block benefits-block--buyers reveal">
+          <div class="benefits-block-header">
+            <div class="benefits-icon">🛍️</div>
+            <h3>Para compradores</h3>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-check">✓</span>
+              <div>
+                <strong>Moda única y local</strong>
+                <p>Descubre piezas que no encontrarás en las grandes cadenas. Estilo con personalidad.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check">✓</span>
+              <div>
+                <strong>Envíos exprés en tu ciudad</strong>
+                <p>Recibe tu pedido el mismo día o al día siguiente. Sin esperas eternas.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check">✓</span>
+              <div>
+                <strong>Precios competitivos</strong>
+                <p>Sin intermediarios innecesarios. El precio justo para ti y para la tienda.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check">✓</span>
+              <div>
+                <strong>Compra con propósito</strong>
+                <p>Cada euro que gastas se queda en tu ciudad y apoya a pequeños empresarios.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Separador visual -->
+        <div class="benefits-divider reveal">
+          <div class="divider-line"></div>
+          <div class="divider-icon">
+            <svg class="logo-icon-sm" viewBox="0 0 60 75" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 4 C24 4 18 8 18 14 L18 18 L10 18 C6 18 2 22 2 26 L2 62 C2 66 6 70 10 70 L50 70 C54 70 58 66 58 62 L58 26 C58 22 54 18 50 18 L42 18 L42 14 C42 8 36 4 30 4 Z" fill="#3dbdad"/>
+              <path d="M2 45 L58 45 L58 62 C58 66 54 70 50 70 L10 70 C6 70 2 66 2 62 Z" fill="#e8613a"/>
+              <circle cx="30" cy="14" r="5" fill="none" stroke="#c8960c" stroke-width="3"/>
+              <path d="M18 14 Q18 10 22 8 Q26 6 30 6 Q34 6 38 8 Q42 10 42 14" fill="none" stroke="#c8960c" stroke-width="3" stroke-linecap="round"/>
+              <path d="M20 42 C20 35 24 30 30 30 C36 30 40 35 40 42 C40 49 36 54 30 54 C24 54 20 49 20 42 Z" fill="white" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="divider-line"></div>
+        </div>
+
+        <!-- Para tiendas -->
+        <div class="benefits-block benefits-block--stores reveal">
+          <div class="benefits-block-header">
+            <div class="benefits-icon">🏪</div>
+            <h3>Para tiendas locales</h3>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-check benefit-check--orange">✓</span>
+              <div>
+                <strong>Visibilidad inmediata</strong>
+                <p>Tu tienda visible para miles de clientes potenciales en tu ciudad desde el día 1.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check benefit-check--orange">✓</span>
+              <div>
+                <strong>Gestión sencilla</strong>
+                <p>Panel de control intuitivo. Sube productos, gestiona pedidos y comunícate con clientes fácilmente.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check benefit-check--orange">✓</span>
+              <div>
+                <strong>Sin costes fijos</strong>
+                <p>Solo pagas una pequeña comisión cuando vendes. Sin cuotas mensuales ni sorpresas.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check benefit-check--orange">✓</span>
+              <div>
+                <strong>Datos y analíticas</strong>
+                <p>Conoce mejor a tus clientes. Informes de ventas, visitas y tendencias en tiempo real.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       TIENDAS DESTACADAS / PRODUCTOS
+  ======================================== -->
+  <section class="featured" id="tiendas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Curado para ti</span>
+        <h2 class="section-title">Tiendas y productos destacados</h2>
+        <p class="section-desc">Una selección de lo mejor que encontrarás en Modalia esta semana</p>
+      </div>
+
+      <!-- Filtros de categoría -->
+      <div class="category-filters reveal">
+        <button class="filter-btn filter-btn--active">Todos</button>
+        <button class="filter-btn">Mujer</button>
+        <button class="filter-btn">Hombre</button>
+        <button class="filter-btn">Vintage</button>
+        <button class="filter-btn">Complementos</button>
+        <button class="filter-btn">Niños</button>
+      </div>
+
+      <!-- Grid de productos -->
+      <div class="products-grid">
+
+        <div class="product-card reveal">
+          <div class="product-img product-img--1">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 15 L15 40 L28 45 L28 115 L72 115 L72 45 L85 40 L65 15 C62 20 55 24 50 24 C45 24 38 20 35 15Z" fill="#3dbdad" opacity="0.3"/>
+                <path d="M35 15 L15 40 L28 45 L28 115 L72 115 L72 45 L85 40 L65 15 C62 20 55 24 50 24 C45 24 38 20 35 15Z" fill="none" stroke="#3dbdad" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="product-badge product-badge--new">Nuevo</span>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">Boutique Alma · Sevilla</span>
+            <h4 class="product-name">Blusa boho algodón</h4>
+            <div class="product-footer">
+              <span class="product-price">34,90 €</span>
+              <span class="product-rating">★ 4.9</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card product-card--featured reveal">
+          <div class="product-img product-img--2">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="20" width="50" height="90" rx="8" fill="#e8613a" opacity="0.25"/>
+                <rect x="25" y="20" width="50" height="90" rx="8" fill="none" stroke="#e8613a" stroke-width="2"/>
+                <line x1="50" y1="20" x2="50" y2="110" stroke="#e8613a" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+            <span class="product-badge product-badge--hot">🔥 Tendencia</span>
+            <button class="product-wishlist active">♥</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">El Armario de Ana · Madrid</span>
+            <h4 class="product-name">Pantalón palazzo lino</h4>
+            <div class="product-footer">
+              <span class="product-price">59,00 €</span>
+              <span class="product-rating">★ 5.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img product-img--3">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="50" cy="90" rx="30" ry="30" fill="#c8960c" opacity="0.2"/>
+                <ellipse cx="50" cy="90" rx="30" ry="30" fill="none" stroke="#c8960c" stroke-width="2"/>
+                <path d="M35 55 L50 30 L65 55" fill="#c8960c" opacity="0.2"/>
+                <path d="M35 55 L50 30 L65 55" fill="none" stroke="#c8960c" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="product-badge product-badge--sale">−20%</span>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">Vintage & Co · Barcelona</span>
+            <h4 class="product-name">Bolso paja artesanal</h4>
+            <div class="product-footer">
+              <span class="product-price">39,20 €</span>
+              <span class="product-price-old">49,00 €</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img product-img--4">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 110 L50 20 L80 110 Z" fill="#3dbdad" opacity="0.2"/>
+                <path d="M20 110 L50 20 L80 110 Z" fill="none" stroke="#3dbdad" stroke-width="2"/>
+                <path d="M30 80 L70 80" stroke="#3dbdad" stroke-width="2" opacity="0.5"/>
+              </svg>
+            </div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">ModaHombre BCN · Barcelona</span>
+            <h4 class="product-name">Camiseta lino oversize</h4>
+            <div class="product-footer">
+              <span class="product-price">28,50 €</span>
+              <span class="product-rating">★ 4.8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img product-img--5">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 30 Q25 20 50 20 Q75 20 75 30 L75 110 Q75 120 50 120 Q25 120 25 110 Z" fill="#e8613a" opacity="0.2"/>
+                <path d="M25 30 Q25 20 50 20 Q75 20 75 30 L75 110 Q75 120 50 120 Q25 120 25 110 Z" fill="none" stroke="#e8613a" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="product-badge product-badge--new">Eco</span>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">Verde Moda · Valencia</span>
+            <h4 class="product-name">Vestido midi sostenible</h4>
+            <div class="product-footer">
+              <span class="product-price">72,00 €</span>
+              <span class="product-rating">★ 4.9</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-img product-img--6">
+            <div class="product-img-inner">
+              <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="65" r="35" fill="#c8960c" opacity="0.2"/>
+                <circle cx="50" cy="65" r="35" fill="none" stroke="#c8960c" stroke-width="2"/>
+                <circle cx="50" cy="65" r="15" fill="#c8960c" opacity="0.3"/>
+              </svg>
+            </div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <span class="product-store">Joyas Cuentas · Málaga</span>
+            <h4 class="product-name">Collar artesanal verano</h4>
+            <div class="product-footer">
+              <span class="product-price">22,00 €</span>
+              <span class="product-rating">★ 5.0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center reveal">
+        <a href="#" class="btn-outline-lg">Ver todas las tiendas →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       TESTIMONIOS
+  ======================================== -->
+  <section class="testimonials" id="testimonios">
+    <div class="testimonials-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag section-tag--light">Comunidad</span>
+        <h2 class="section-title section-title--light">Lo que dicen nuestros usuarios</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "Llevaba años queriendo apoyar las tiendas de mi barrio pero no encontraba forma fácil de hacerlo. Con Modalia es un placer. Compro moda única y sé que mi dinero se queda en Sevilla."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar--1">MR</div>
+            <div>
+              <strong>María Rodríguez</strong>
+              <span>Compradora · Sevilla</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card testimonial-card--featured reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "Como propietaria de una boutique pequeña, Modalia me ha dado visibilidad que nunca hubiera podido pagar en publicidad. El primer mes triplicamos las ventas online."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar--2">CL</div>
+            <div>
+              <strong>Carmen López</strong>
+              <span>Propietaria de Boutique Alma · Sevilla</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "La entrega en el mismo día es increíble. Pedí una chaqueta a las 11 de la mañana y la tenía en casa a las 4. Imposible competir con eso desde una plataforma nacional."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar--3">JP</div>
+            <div>
+              <strong>Javier Pérez</strong>
+              <span>Comprador · Barcelona</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>
+            "El panel de gestión es súper intuitivo. En menos de una hora ya tenía mi catálogo completo y los primeros pedidos llegaron esa misma tarde. Una revolución para el pequeño comercio."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar--4">AG</div>
+            <div>
+              <strong>Ana García</strong>
+              <span>Dueña de Verde Moda · Valencia</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Logos de medios -->
+      <div class="press-mentions reveal">
+        <p>Hablaron de nosotros</p>
+        <div class="press-logos">
+          <span class="press-logo">El País</span>
+          <span class="press-logo">Expansión</span>
+          <span class="press-logo">Vogue ES</span>
+          <span class="press-logo">Forbes</span>
+          <span class="press-logo">El Mundo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       CTA FINAL
+  ======================================== -->
+  <section class="final-cta">
+    <div class="final-cta-blob final-cta-blob--1"></div>
+    <div class="final-cta-blob final-cta-blob--2"></div>
+    <div class="container">
+      <div class="final-cta-inner reveal">
+        <span class="section-tag">¿Listo para empezar?</span>
+        <h2>Únete a la revolución<br />de la moda local</h2>
+        <p>Más de 2.400 tiendas ya están vendiendo en Modalia.<br />¿A qué esperas para formar parte?</p>
+
+        <div class="final-cta-buttons">
+          <a href="#" class="btn-cta-primary">
+            Quiero comprar moda local
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn-cta-secondary">
+            Registrar mi tienda gratis
+          </a>
+        </div>
+
+        <p class="final-cta-note">Sin tarjeta de crédito · Registro gratuito · Soporte en español</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 60 75" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 4 C24 4 18 8 18 14 L18 18 L10 18 C6 18 2 22 2 26 L2 62 C2 66 6 70 10 70 L50 70 C54 70 58 66 58 62 L58 26 C58 22 54 18 50 18 L42 18 L42 14 C42 8 36 4 30 4 Z" fill="#3dbdad"/>
+              <path d="M2 45 L58 45 L58 62 C58 66 54 70 50 70 L10 70 C6 70 2 66 2 62 Z" fill="#e8613a"/>
+              <circle cx="30" cy="14" r="5" fill="none" stroke="#c8960c" stroke-width="3"/>
+              <path d="M18 14 Q18 10 22 8 Q26 6 30 6 Q34 6 38 8 Q42 10 42 14" fill="none" stroke="#c8960c" stroke-width="3" stroke-linecap="round"/>
+              <path d="M20 42 C20 35 24 30 30 30 C36 30 40 35 40 42 C40 49 36 54 30 54 C24 54 20 49 20 42 Z" fill="white" opacity="0.9"/>
+            </svg>
+            <span class="logo-text">modalia</span>
+          </a>
+          <p>El marketplace que conecta la moda local con los clientes de tu ciudad.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.02a8.25 8.25 0 0 0 4.83 1.54V7.13a4.85 4.85 0 0 1-1.06-.44z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links marketplace -->
+        <div class="footer-links">
+          <h4>Marketplace</h4>
+          <ul>
+            <li><a href="#">Explorar tiendas</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Tendencias</a></li>
+            <li><a href="#">Outlet</a></li>
+            <li><a href="#">Moda sostenible</a></li>
+          </ul>
+        </div>
+
+        <!-- Links tiendas -->
+        <div class="footer-links">
+          <h4>Para tiendas</h4>
+          <ul>
+            <li><a href="#">Registrar mi tienda</a></li>
+            <li><a href="#">Cómo funciona</a></li>
+            <li><a href="#">Tarifas y comisiones</a></li>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Blog de vendedores</a></li>
+          </ul>
+        </div>
+
+        <!-- Links empresa -->
+        <div class="footer-links">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Ciudades disponibles</a></li>
+            <li><a href="#">Prensa</a></li>
+            <li><a href="#">Sostenibilidad</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <div class="newsletter-text">
+          <h4>¿Te apuntas a las novedades?</h4>
+          <p>Tendencias, nuevas tiendas y ofertas exclusivas cada semana.</p>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" placeholder="tucorreo@email.com" />
+          <button class="btn-newsletter">Suscribirme</button>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2025 Modalia. Todos los derechos reservados. Hecho con ❤️ en España.</p>
+        <div class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+          <a href="#">Términos de uso</a>
+          <a href="#">Aviso legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================
+       SCROLL TO TOP
+  ======================================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+
+  <!-- ========================================
+       JAVASCRIPT
+  ======================================== -->
+  <script>
+    /* ---- Navbar scroll ---- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    /* ---- Hamburger mobile ---- */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMobile() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+
+    /* ---- Scroll reveal ---- */
+    const revealEls = document.querySelectorAll('.reveal, .fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ---- Scroll to top ---- */
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ---- Filter buttons ---- */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+        btn.classList.add('filter-btn--active');
+      });
+    });
+
+    /* ---- Wishlist toggle ---- */
+    document.querySelectorAll('.product-wishlist').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        btn.textContent = btn.classList.contains('active') ? '♥' : '♡';
+      });
+    });
+
+    /* ---- Smooth scroll for anchor links ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
