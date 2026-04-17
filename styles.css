@@ -30,7 +30,7 @@
   --gray-400: #b0a898;
   --gray-600: #7a7268;
   --gray-800: #3d3830;
-  --black: #1e1a14;
+  --black: #003149;
 
   /* Tipografía */
   --font: 'Quicksand', sans-serif;
@@ -806,7 +806,7 @@ ul {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--teal), var(--orange));
+  background: linear-gradient(90deg, var(--teal), var(--teal));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition);
@@ -1940,4 +1940,12 @@ ul {
   .press-logo {
     font-size: 0.85rem;
   }
+}
+
+.logo-donde {
+  color: var(--orange);
+}
+
+.logo-siempre {
+  color: var(--teal);
 }
