@@ -11,7 +11,6 @@
    1. CSS VARIABLES & RESET
    ================================================================ */
 :root {
-  /* Colores corporativos */
   --teal: #3dbdad;
   --teal-light: #6dd5c8;
   --teal-dark: #2a9e90;
@@ -21,7 +20,6 @@
   --gold: #c8960c;
   --gold-light: #e5b52a;
 
-  /* Neutros */
   --white: #ffffff;
   --off-white: #faf9f7;
   --cream: #f5f2ed;
@@ -32,24 +30,20 @@
   --gray-800: #3d3830;
   --black: #003149;
 
-  /* Tipografía */
   --font: 'Quicksand', sans-serif;
 
-  /* Sombras */
   --shadow-sm: 0 2px 8px rgba(30, 26, 20, 0.08);
   --shadow-md: 0 4px 20px rgba(30, 26, 20, 0.12);
   --shadow-lg: 0 8px 40px rgba(30, 26, 20, 0.16);
   --shadow-teal: 0 8px 30px rgba(61, 189, 173, 0.3);
   --shadow-orange: 0 8px 30px rgba(232, 97, 58, 0.3);
 
-  /* Bordes redondeados */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-xl: 32px;
   --radius-full: 999px;
 
-  /* Transiciones */
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -111,7 +105,6 @@ ul {
   text-align: center;
 }
 
-/* Animaciones de scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -139,7 +132,6 @@ ul {
   transition-delay: 0.2s;
 }
 
-/* Stagger para cards en grid */
 .step-card:nth-child(2).reveal.visible {
   transition-delay: 0.1s;
 }
@@ -173,10 +165,8 @@ ul {
 }
 
 /* ================================================================
-   3. COMPONENTES COMUNES (Botones, Tags)
+   3. COMPONENTES COMUNES
    ================================================================ */
-
-/* Botón primario general */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -201,7 +191,6 @@ ul {
   transform: translateY(0);
 }
 
-/* Botón ghost nav */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -218,7 +207,6 @@ ul {
   background: rgba(61, 189, 173, 0.08);
 }
 
-/* Etiqueta de sección */
 .section-tag {
   display: inline-block;
   background: rgba(61, 189, 173, 0.12);
@@ -291,7 +279,6 @@ ul {
   gap: 32px;
 }
 
-/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -311,7 +298,6 @@ ul {
   letter-spacing: -0.02em;
 }
 
-/* Links de navegación */
 .nav-links {
   display: flex;
   align-items: center;
@@ -333,7 +319,6 @@ ul {
   background: rgba(61, 189, 173, 0.08);
 }
 
-/* Acciones nav */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -341,7 +326,6 @@ ul {
   flex-shrink: 0;
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -371,7 +355,6 @@ ul {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Menú móvil */
 .mobile-menu {
   display: none;
   overflow: hidden;
@@ -430,7 +413,6 @@ ul {
   overflow: hidden;
 }
 
-/* Blobs decorativos */
 .hero-blob {
   position: absolute;
   border-radius: 50%;
@@ -462,7 +444,7 @@ ul {
   right: 30%;
 }
 
-/* Grid hero */
+/* Grid hero — desktop */
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -470,7 +452,6 @@ ul {
   align-items: center;
 }
 
-/* Contenido hero */
 .hero-badge {
   display: inline-block;
   background: var(--white);
@@ -515,7 +496,6 @@ ul {
   margin-bottom: 48px;
 }
 
-/* CTA principal hero */
 .btn-hero-primary {
   display: inline-flex;
   align-items: center;
@@ -549,7 +529,6 @@ ul {
   transform: translateY(-1px);
 }
 
-/* CTA secundario hero */
 .btn-hero-ghost {
   display: inline-flex;
   align-items: center;
@@ -572,7 +551,6 @@ ul {
   color: var(--teal);
 }
 
-/* Stats hero */
 .hero-stats {
   display: flex;
   align-items: center;
@@ -603,7 +581,7 @@ ul {
   background: var(--gray-200);
 }
 
-/* Visual / mockup hero */
+/* ---- Hero visual / mockup ---- */
 .hero-visual {
   position: relative;
   display: flex;
@@ -612,7 +590,6 @@ ul {
   height: 460px;
 }
 
-/* Tarjetas apiladas */
 .mockup-card {
   position: absolute;
   background: var(--white);
@@ -660,9 +637,7 @@ ul {
 
 .mockup-img {
   height: 240px;
-  /* altura fija para la imagen */
   flex-shrink: 0;
-  /* que no se encoja */
   background: linear-gradient(160deg, #e8f8f6 0%, #fce8e0 100%);
   display: flex;
   align-items: center;
@@ -735,6 +710,7 @@ ul {
   align-items: center;
   gap: 8px;
   animation: float 3s ease-in-out infinite;
+  white-space: nowrap;
 }
 
 .float-badge--1 {
@@ -761,7 +737,6 @@ ul {
   }
 }
 
-/* Wave separador */
 .hero-wave {
   position: absolute;
   bottom: 0;
@@ -962,7 +937,6 @@ ul {
   line-height: 1.5;
 }
 
-/* Divisor central */
 .benefits-divider {
   display: flex;
   flex-direction: column;
@@ -994,7 +968,6 @@ ul {
   background: var(--white);
 }
 
-/* Filtros */
 .category-filters {
   display: flex;
   gap: 10px;
@@ -1029,7 +1002,6 @@ ul {
   background: var(--teal-dark);
 }
 
-/* Grid de productos */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1051,11 +1023,6 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
-.product-card--featured {
-  grid-column: span 1;
-}
-
-/* Imagen del producto */
 .product-img {
   position: relative;
   height: 220px;
@@ -1094,7 +1061,6 @@ ul {
   height: auto;
 }
 
-/* Transición de imagen en hover */
 .product-img-inner {
   transition: transform var(--transition);
 }
@@ -1103,7 +1069,6 @@ ul {
   transform: scale(1.06);
 }
 
-/* Badges de producto */
 .product-badge {
   position: absolute;
   top: 12px;
@@ -1129,7 +1094,6 @@ ul {
   color: var(--white);
 }
 
-/* Botón wishlist */
 .product-wishlist {
   position: absolute;
   top: 12px;
@@ -1156,7 +1120,6 @@ ul {
   color: var(--orange);
 }
 
-/* Info del producto */
 .product-info {
   padding: 16px;
 }
@@ -1202,7 +1165,6 @@ ul {
   color: var(--gold);
 }
 
-/* Botón outline grande */
 .btn-outline-lg {
   display: inline-flex;
   align-items: center;
@@ -1243,7 +1205,8 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(232, 97, 58, 0.15) 0%, transparent 40%);
 }
 
@@ -1340,7 +1303,6 @@ ul {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Menciones de prensa */
 .press-mentions {
   text-align: center;
 }
@@ -1510,7 +1472,6 @@ ul {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Marca footer */
 .footer-brand .nav-logo .logo-text {
   color: var(--white);
 }
@@ -1523,7 +1484,6 @@ ul {
   max-width: 280px;
 }
 
-/* Social links */
 .footer-social {
   display: flex;
   gap: 10px;
@@ -1552,7 +1512,6 @@ ul {
   transform: translateY(-3px);
 }
 
-/* Links footer */
 .footer-links h4 {
   font-size: 0.82rem;
   font-weight: 700;
@@ -1578,7 +1537,6 @@ ul {
   color: var(--teal-light);
 }
 
-/* Newsletter */
 .footer-newsletter {
   display: flex;
   align-items: center;
@@ -1646,7 +1604,6 @@ ul {
   transform: translateY(-2px);
 }
 
-/* Footer bottom */
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1678,7 +1635,7 @@ ul {
 }
 
 /* ================================================================
-   12. SCROLL TO TOP BUTTON
+   12. SCROLL TO TOP
    ================================================================ */
 .scroll-top {
   position: fixed;
@@ -1733,7 +1690,6 @@ ul {
 
   .hero-visual {
     order: 2;
-    height: 380px;
   }
 
   .hero-subtitle {
@@ -1808,40 +1764,73 @@ ul {
     display: block;
   }
 
-  /* Hero */
+  /* Hero — stack layout */
   .hero {
-    padding: 100px 0 60px;
+    padding: 100px 0 80px;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 1;
   }
 
   .hero-visual {
-    height: 300px;
+    order: 2;
+    /* Give enough height for the stacked cards + badge */
+    height: 340px;
+    width: 100%;
+  }
+
+  /* Centre the card stack within the visual area */
+  .mockup-card--back {
+    width: 210px;
+    height: 275px;
+    top: 20px;
+    right: 50%;
+    margin-right: -115px;
+    /* half of card width */
+  }
+
+  .mockup-card--mid {
+    width: 215px;
+    height: 280px;
+    top: 10px;
+    right: 50%;
+    margin-right: -120px;
   }
 
   .mockup-card--front {
     width: 220px;
-    height: 280px;
-  }
-
-  .mockup-card--mid {
-    width: 225px;
     height: 285px;
+    top: 10px;
+    right: 50%;
+    margin-right: -110px;
   }
 
-  .mockup-card--back {
-    width: 220px;
-    height: 280px;
+  .mockup-img {
+    height: 190px;
+  }
+
+  /* Reposition floating badge so it doesn't overflow */
+  .float-badge--2 {
+    top: auto;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: none;
+    /* stop float when centred to avoid layout jump */
+    font-size: 0.78rem;
+    padding: 7px 14px;
   }
 
   .float-badge--1 {
-    left: -10px;
-    font-size: 0.76rem;
-    padding: 8px 12px;
-  }
-
-  .float-badge--2 {
-    left: 10px;
-    font-size: 0.76rem;
-    padding: 8px 12px;
+    display: none;
   }
 
   /* Steps */
@@ -1912,17 +1901,44 @@ ul {
    15. RESPONSIVE — SMALL MOBILE (max 480px)
    ================================================================ */
 @media (max-width: 480px) {
+
   .container {
     padding: 0 16px;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .btn-hero-primary {
     padding: 14px 20px;
     font-size: 0.9rem;
+  }
+
+  .hero-visual {
+    height: 300px;
+  }
+
+  .mockup-card--back {
+    width: 180px;
+    height: 240px;
+    margin-right: -100px;
+  }
+
+  .mockup-card--mid {
+    width: 185px;
+    height: 245px;
+    margin-right: -105px;
+  }
+
+  .mockup-card--front {
+    width: 190px;
+    height: 248px;
+    margin-right: -95px;
+  }
+
+  .mockup-img {
+    height: 165px;
   }
 
   .hero-stats {
@@ -1942,6 +1958,9 @@ ul {
   }
 }
 
+/* ================================================================
+   16. BRAND COLOURS
+   ================================================================ */
 .logo-donde {
   color: var(--orange);
 }
